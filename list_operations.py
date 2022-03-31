@@ -1,6 +1,9 @@
 """Utilities for manipulating lists."""
 
 
+from tkinter.tix import InputOnly
+
+
 def head(input_list):
     """Return the first item of the input list.
 
@@ -49,7 +52,7 @@ def top(input_list):
 
     """
 
-    return input[:-1]
+    return input_list[:-1]
 
 
 def first_three(input_list):
@@ -118,7 +121,7 @@ def inner_four_end(input_list):
 
     """
 
-    return input_list[]
+    return input_list[4:8]
 
 
 def replace_head(input_list):
@@ -154,7 +157,8 @@ def replace_third_and_last(input_list):
     [0, 3, 37, 9, 12, 15, 18, 21, 24, 37]
 
     """
-    input_list[2], input_list[-1] = 37
+    input_list[2] = 37
+    input_list[-1] = 37
     pass
 
 
@@ -193,8 +197,8 @@ def delete_third_and_seventh(input_list):
     ['Do', 'Re', 'Fa', 'So', 'La', 'Do']
 
     """
-    input_list.pop(2)
-    input_list.pop(5)
+    del input_list[2]
+    del input_list[-2]
     pass
 
 
